@@ -53,15 +53,15 @@ export default function Hero({ setActiveTab }) {
             <div className="relative w-full max-w-[340px] aspect-[4/5] flex items-end justify-center">
               
               {/* Semicircle/Arch Backing shape like the reference image, in Neo-Brutalist secondary blue color */}
-              <div className="absolute bottom-0 w-[90%] h-[82%] bg-[#8B9A8B] rounded-t-full border-brutal shadow-brutal-lg" />
-
-              {/* The Profile Photo (Transparent PNG) popping out of the arch frame */}
-              <img 
-                src="/avatar.png" 
-                alt="Shoeb Khan" 
-                className="absolute bottom-[-4px] h-[100%] w-auto object-contain object-bottom z-10 grayscale hover:grayscale-0 transition-all duration-300 select-none pointer-events-none"
-                style={{ mixBlendMode: 'multiply' }}
-              />
+              {/* Wrapped in overflow-hidden and rounded-t-full to clip the straight crop edges of the portrait */}
+              <div className="absolute bottom-0 w-[90%] h-[82%] bg-[#8B9A8B] rounded-t-full border-brutal shadow-brutal-lg overflow-hidden flex items-end justify-center">
+                {/* The Profile Photo (Transparent PNG) popping out of the arch frame */}
+                <img 
+                  src="/avatar.png" 
+                  alt="Shoeb Khan" 
+                  className="w-full h-[105%] object-cover object-bottom z-10 scale-105 origin-bottom grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none"
+                />
+              </div>
 
               {/* Green Neon Swirly line wrapping around the torso, just like the reference image */}
               <svg 

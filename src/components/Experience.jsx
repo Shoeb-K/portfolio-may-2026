@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    company: "Quadzero [/globe]",
+    company: "Quadzero",
     role: "Software Developer",
     period: "Jan 2024 - Present",
     location: "Mumbai, India",
@@ -26,7 +26,7 @@ export default function Experience() {
 
         <div className="space-y-12">
           {experiences.map((exp, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
