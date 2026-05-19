@@ -57,7 +57,7 @@ export default function Hero({ setActiveTab }) {
                 <img 
                   src="/avatar.png" 
                   alt="Shoeb Khan" 
-                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none pointer-events-none z-10 translate-y-[42px] scale-[1.75] origin-bottom"
+                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none pointer-events-none z-10 translate-y-[34px] scale-[1.52] origin-bottom"
                 />
               </div>
 
@@ -66,10 +66,10 @@ export default function Hero({ setActiveTab }) {
                 <img 
                   src="/avatar.png" 
                   alt="Shoeb Khan" 
-                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none scale-[1.75] translate-y-[42px] origin-bottom"
+                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none scale-[1.52] translate-y-[34px] origin-bottom"
                   style={{
-                    clipPath: 'inset(0% 0% 45% 0%)',
-                    WebkitClipPath: 'inset(0% 0% 45% 0%)'
+                    clipPath: 'inset(0% 0% 58% 0%)',
+                    WebkitClipPath: 'inset(0% 0% 58% 0%)'
                   }}
                 />
               </div>
