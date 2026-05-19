@@ -1,0 +1,57 @@
+SHOEB KHAN
++91 70201 76213 | khan.shoeb006@gmail.com | shoebkhan.com
+LinkedIn | GitHub | shoeb-khan
+Mumbai, Maharashtra - 401305, India
+SUMMARY
+Software Developer with 2+ years of experience building scalable backend systems and cloud-native applications on
+AWS, focusing on serverless and event-driven architectures, CI/CD automation, and system reliability. Proven track
+record of delivering end-to-end production systems, reducing deployment time by 40%, and improving performance by
+30%. Strong experience in designing secure APIs and distributed systems.
+EDUCATION
+• University of Mumbai July 2019 - May 2023
+Bachelor of Computer Engineering Mumbai, India
+◦ GPA: 9.06/10.00
+EXPERIENCE
+• Quadzero [/gl⌢be] Jan 2024 - Present
+Software Developer Mumbai, India
+◦ Led end-to-end backend development of a multi-application platform (Admin, Supervisor, User), enabling
+role-based workflows and hierarchical access control.
+◦ Architected scalable serverless infrastructure on AWS (Lambda, API Gateway, DynamoDB), enabling event-driven
+processing using SQS, SNS, and Step Functions.
+◦ Designed an event-driven pipeline using DynamoDB Streams, Lambda, and SQS to trigger APIs and handle failures
+via DLQs with email alerts.
+◦ Improved system performance by 30% through asynchronous processing, database optimization, and service
+decoupling.
+◦ Engineered backend systems handling high-throughput asynchronous workloads using SQS and Lambda-based
+processing at scale.
+◦ Developed secure authentication and access control APIs using JWT and IAM policies across distributed services.
+◦ Built real-time notification systems integrating AWS SES and Firebase Cloud Messaging, enabling reliable
+event-driven communication.
+◦ Led architectural decisions including service decoupling, event flow design, and scalability.
+PROJECTS
+• Serverless Event-Driven Notification System
+GitHub | T ech: AWS Lambda, API Gateway, SQS, SES, Python, Boto3
+◦ Developed a serverless event-driven notification system using AWS Lambda, SQS, and SES.
+◦ Designed decoupled architecture using SQS for asynchronous processing and fault isolation.
+◦ Implemented retry logic with Dead Letter Queues (DLQ) for failure handling.
+◦ Enabled scalable event processing using Lambda concurrency.
+• Scalable Serverless Backend for Multi-Role Application
+GitHub | T ech: AWS Lambda, API Gateway, DynamoDB, SQS, AWS CDK, Python
+◦ Architected a serverless backend supporting multi-role access control (RBAC).
+◦ Developed authentication APIs using JWT-based token validation.
+◦ Built event-driven workflows using SQS for asynchronous task processing.
+◦ Engineered scalable backend services using Lambda and DynamoDB.
+• Serverless TODO App with CI/CD
+GitHub | T ools: Docker, Jenkins, AWS ECS
+◦ Developed microservices-based TODO app using Node.js and React on AWS ECS.
+◦ Automated deployments using CI/CD pipelines (GitHub + Jenkins).
+◦ Integrated CloudWatch for logging and monitoring.
+SKILLS
+Languages: Python, JavaScript, SQL, C++
+Backend: Node.js, Express.js, REST APIs
+Cloud & DevOps: AWS (Lambda, API Gateway, DynamoDB, SQS, SNS, SES), Docker, Jenkins, GitHub Actions
+Databases: DynamoDB, PostgreSQL, MongoDB
+Architecture: Serverless, Event-Driven, Microservices, CI/CD
+Tools: CloudWatch, Prometheus, Grafana, Postman, JIRA
+CERTIFICATIONS
+AWS Cloud Technical Essentials | AWS DevOps Specialization | AWS APAC Solutions Architecture Simulation

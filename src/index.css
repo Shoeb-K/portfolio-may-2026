@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #EBE9E1;
+  --color-foreground: #1A1A1A;
+  --color-primary: #FF4500;
+  --color-secondary: #2563EB;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --shadow-brutal: 4px 4px 0px 0px rgba(26,26,26,1);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(26,26,26,1);
+}
+
+@utility border-brutal {
+  border: 2px solid var(--color-foreground);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 1px 1px, rgba(26,26,26,0.1) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+}
