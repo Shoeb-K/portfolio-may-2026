@@ -10,7 +10,7 @@ export default function Contact() {
     e.preventDefault();
     if (formState.name && formState.email && formState.message) {
       const formData = {
-        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "88b92942-7fdb-43d5-8283-5ab3c4f42c7b",
         name: formState.name,
         email: formState.email,
         message: formState.message,
