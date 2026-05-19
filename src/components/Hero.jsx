@@ -43,74 +43,28 @@ export default function Hero({ setActiveTab }) {
             </p>
           </motion.div>
 
-          {/* Right Side: Avatar / Graphic inspired by the reference image */}
+          {/* Right Side: Avatar / Graphic inspired by the new circular dark-themed reference image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center items-center relative mt-8 lg:mt-0"
+            className="lg:col-span-5 flex justify-center items-center relative mt-8 lg:mt-0 animate-fade-in"
           >
-            <div className="relative w-full max-w-[340px] aspect-[4/5] flex items-end justify-center">
+            <div className="relative w-full max-w-[360px] aspect-square flex items-center justify-center">
               
-              {/* Semicircle/Arch Backing shape like the reference image, in Neo-Brutalist secondary blue color */}
-              {/* Wrapped in overflow-hidden and rounded-t-full to clip the straight crop edges of the portrait */}
-              <div className="absolute bottom-0 w-[90%] h-[82%] bg-[#8B9A8B] rounded-t-full border-brutal shadow-brutal-lg overflow-hidden flex items-end justify-center">
-                {/* The Profile Photo (Transparent PNG) popping out of the arch frame */}
-                <img 
-                  src="/avatar.png" 
-                  alt="Shoeb Khan" 
-                  className="w-full h-[105%] object-cover object-bottom z-10 scale-105 origin-bottom grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none"
-                />
-              </div>
+              {/* Solid dark charcoal circle background matching the premium reference aesthetic */}
+              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg absolute" />
 
-              {/* Green Neon Swirly line wrapping around the torso, just like the reference image */}
-              <svg 
-                className="absolute inset-0 w-full h-full pointer-events-none z-20"
-                viewBox="0 0 400 500"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path 
-                  d="M 40,430 C 100,450 300,450 360,410 C 400,370 310,340 190,340 C 90,340 40,310 70,270 C 100,230 280,170 345,75" 
-                  stroke="#10B981" 
-                  strokeWidth="6" 
-                  strokeLinecap="round"
-                  className="drop-shadow-[0_2px_10px_rgba(16,185,129,0.7)]"
-                />
-              </svg>
-
-              {/* Rotating Circular "COME ON LET'S TALK" Badge like the reference image */}
-              <div className="absolute -top-8 -right-12 w-32 h-32 z-30">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-                  className="w-full h-full relative"
-                >
-                  <svg className="w-full h-full" viewBox="0 0 100 100">
-                    <defs>
-                      <path 
-                        id="circlePath" 
-                        d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" 
-                      />
-                    </defs>
-                    <text className="font-mono text-[7px] font-black uppercase tracking-widest fill-foreground">
-                      <textPath href="#circlePath" startOffset="0%">
-                        • COME ON LET'S TALK • GET IN TOUCH 
-                      </textPath>
-                    </text>
-                  </svg>
-                  
-                  {/* Inside circle CTA button */}
-                  <button 
-                    onClick={() => setActiveTab && setActiveTab('contact')}
-                    className="absolute inset-8 rounded-full bg-[#10B981] border-brutal hover:scale-110 active:scale-95 transition-all flex items-center justify-center cursor-pointer shadow-brutal hover:shadow-none"
-                    aria-label="Contact Shoeb"
-                  >
-                    <span className="w-3 h-3 rounded-full bg-white animate-ping absolute opacity-75" />
-                    <span className="w-3 h-3 rounded-full bg-white z-10" />
-                  </button>
-                </motion.div>
-              </div>
+              {/* The Profile Photo (Transparent PNG) overlapping the circle organically with a smooth bottom fade */}
+              <img 
+                src="/avatar.png" 
+                alt="Shoeb Khan" 
+                className="h-[380px] w-auto object-contain z-10 absolute bottom-[-15px] grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none"
+                style={{
+                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)'
+                }}
+              />
 
             </div>
           </motion.div>
