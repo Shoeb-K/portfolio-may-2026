@@ -19,7 +19,7 @@ function App() {
         
         {activeTab === 'home' && (
           <>
-            <Hero />
+            <Hero setActiveTab={setActiveTab} />
             <Experience />
             <Projects />
             <Skills />
