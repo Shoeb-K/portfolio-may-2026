@@ -53,13 +53,13 @@ export default function Hero({ setActiveTab }) {
             <div className="relative w-full max-w-[340px] aspect-[4/5] flex items-end justify-center">
               
               {/* Semicircle/Arch Backing shape like the reference image, in Neo-Brutalist secondary blue color */}
-              <div className="absolute bottom-0 w-[90%] h-[82%] bg-[#2563EB] rounded-t-full border-brutal shadow-brutal-lg" />
+              <div className="absolute bottom-0 w-[90%] h-[82%] bg-[#8B9A8B] rounded-t-full border-brutal shadow-brutal-lg" />
 
               {/* The Profile Photo (Transparent PNG) popping out of the arch frame */}
               <img 
                 src="/avatar.png" 
                 alt="Shoeb Khan" 
-                className="absolute bottom-0 h-[98%] w-auto object-contain z-10 hover:scale-105 transition-transform duration-300 select-none"
+                className="absolute bottom-[-4px] h-[100%] w-auto object-contain object-bottom z-10 grayscale hover:grayscale-0 transition-all duration-300 select-none pointer-events-none"
               />
 
               {/* Green Neon Swirly line wrapping around the torso, just like the reference image */}
@@ -70,7 +70,7 @@ export default function Hero({ setActiveTab }) {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path 
-                  d="M 20,400 C 100,430 300,430 370,390 C 420,330 300,290 180,290 C 50,290 10,250 40,200 C 70,150 280,160 340,60" 
+                  d="M 40,430 C 100,450 300,450 360,410 C 400,370 310,340 190,340 C 90,340 40,310 70,270 C 100,230 280,170 345,75" 
                   stroke="#10B981" 
                   strokeWidth="6" 
                   strokeLinecap="round"
@@ -79,7 +79,7 @@ export default function Hero({ setActiveTab }) {
               </svg>
 
               {/* Rotating Circular "COME ON LET'S TALK" Badge like the reference image */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 z-30">
+              <div className="absolute -top-8 -right-12 w-32 h-32 z-30">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
