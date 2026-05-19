@@ -52,19 +52,15 @@ export default function Hero({ setActiveTab }) {
           >
             <div className="relative w-full max-w-[360px] aspect-square flex items-center justify-center">
               
-              {/* Solid dark charcoal circle background matching the premium reference aesthetic */}
-              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg absolute" />
-
-              {/* The Profile Photo (Transparent PNG) overlapping the circle organically with a smooth bottom fade */}
-              <img 
-                src="/avatar.png" 
-                alt="Shoeb Khan" 
-                className="h-[380px] w-auto object-contain z-10 absolute bottom-[-15px] grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none"
-                style={{
-                  maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)'
-                }}
-              />
+              {/* Solid dark charcoal circle frame that clips the transparent PNG perfectly like the Mahmood reference */}
+              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg overflow-hidden relative flex items-end justify-center">
+                {/* The Profile Photo (Transparent PNG) perfectly framed within the circle */}
+                <img 
+                  src="/avatar.png" 
+                  alt="Shoeb Khan" 
+                  className="w-[95%] h-[95%] object-contain object-bottom grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none z-10 translate-y-1 scale-105"
+                />
+              </div>
 
             </div>
           </motion.div>
