@@ -60,6 +60,7 @@ export default function Hero({ setActiveTab }) {
                 src="/avatar.png" 
                 alt="Shoeb Khan" 
                 className="absolute bottom-[-4px] h-[100%] w-auto object-contain object-bottom z-10 grayscale hover:grayscale-0 transition-all duration-300 select-none pointer-events-none"
+                style={{ mixBlendMode: 'multiply' }}
               />
 
               {/* Green Neon Swirly line wrapping around the torso, just like the reference image */}
