@@ -52,15 +52,15 @@ export default function Hero({ setActiveTab }) {
           >
             <div className="relative w-full max-w-[360px] aspect-square flex items-center justify-center">
               
-              {/* Solid dark charcoal circle frame that clips the transparent PNG perfectly like the Mahmood reference */}
-              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg overflow-hidden relative flex items-end justify-center">
-                {/* The Profile Photo (Transparent PNG) perfectly framed within the circle */}
-                <img 
-                  src="/avatar.png" 
-                  alt="Shoeb Khan" 
-                  className="w-[95%] h-[95%] object-contain object-bottom grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none z-10 translate-y-1 scale-105"
-                />
-              </div>
+              {/* Solid dark charcoal circle background matching the premium reference aesthetic */}
+              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg absolute z-0" />
+
+              {/* The Profile Photo (Transparent PNG) overlapping the circle, head popping out at the top */}
+              <img 
+                src="/avatar.png" 
+                alt="Shoeb Khan" 
+                className="h-[360px] w-auto object-contain z-10 absolute bottom-[30px] grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none scale-105 origin-bottom"
+              />
 
             </div>
           </motion.div>
