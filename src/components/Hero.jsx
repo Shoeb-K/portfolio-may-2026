@@ -48,19 +48,31 @@ export default function Hero({ setActiveTab }) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center items-center relative mt-8 lg:mt-0 animate-fade-in"
+            className="lg:col-span-5 flex justify-center items-center relative mt-8 lg:mt-0 animate-fade-in group"
           >
             <div className="relative w-full max-w-[360px] aspect-square flex items-center justify-center">
               
-              {/* Solid dark charcoal circle background matching the premium reference aesthetic */}
-              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg absolute z-0" />
+              {/* Base Circle with Overflow Hidden (clips the bottom image & shoulders) */}
+              <div className="w-[300px] h-[300px] rounded-full bg-[#1A1A1A] border-brutal shadow-brutal-lg overflow-hidden absolute flex items-end justify-center z-10">
+                <img 
+                  src="/avatar.png" 
+                  alt="Shoeb Khan" 
+                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none pointer-events-none z-10 translate-y-[42px] scale-[1.75] origin-bottom"
+                />
+              </div>
 
-              {/* The Profile Photo (Transparent PNG) overlapping the circle, head popping out at the top */}
-              <img 
-                src="/avatar.png" 
-                alt="Shoeb Khan" 
-                className="h-[360px] w-auto object-contain z-10 absolute bottom-[30px] grayscale hover:grayscale-0 transition-all duration-500 select-none pointer-events-none scale-105 origin-bottom"
-              />
+              {/* Top Image Overlay (NOT clipped by the circle, but clipped in half by clip-path to let only the head show) */}
+              <div className="w-[300px] h-[300px] absolute flex items-end justify-center z-20 pointer-events-none">
+                <img 
+                  src="/avatar.png" 
+                  alt="Shoeb Khan" 
+                  className="w-full h-full object-contain object-bottom grayscale group-hover:grayscale-0 transition-all duration-500 select-none scale-[1.75] translate-y-[42px] origin-bottom"
+                  style={{
+                    clipPath: 'inset(0% 0% 45% 0%)',
+                    WebkitClipPath: 'inset(0% 0% 45% 0%)'
+                  }}
+                />
+              </div>
 
             </div>
           </motion.div>
