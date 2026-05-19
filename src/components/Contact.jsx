@@ -9,8 +9,14 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formState.name && formState.email && formState.message) {
+      const activeKey = (import.meta.env.VITE_WEB3FORMS_ACCESS_KEY && import.meta.env.VITE_WEB3FORMS_ACCESS_KEY !== "undefined" && import.meta.env.VITE_WEB3FORMS_ACCESS_KEY.trim() !== "")
+        ? import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
+        : "88b92942-7fdb-43d5-8283-5ab3c4f42c7b";
+
+      console.log("Web3Forms submitting with key:", activeKey);
+
       const formData = {
-        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "88b92942-7fdb-43d5-8283-5ab3c4f42c7b",
+        access_key: activeKey,
         name: formState.name,
         email: formState.email,
         message: formState.message,
@@ -36,7 +42,7 @@ export default function Contact() {
             setFormState({ name: '', email: '', message: '' });
           }, 3000);
         } else {
-          alert("Something went wrong. Please try again or email khan.shoeb006@gmail.com directly.");
+          alert(`Something went wrong: ${result.message || "Please check your access key."} \n\nIf the issue persists, please email khan.shoeb006@gmail.com directly.`);
           console.error("Web3Forms error:", result);
         }
       } catch (error) {
