@@ -6,19 +6,19 @@ const projects = [
     title: "Serverless Event-Driven Notification System",
     tech: ["AWS Lambda", "API Gateway", "SQS", "SES", "Python", "Boto3"],
     description: "Developed a serverless event-driven notification system with decoupled architecture. Implemented retry logic with Dead Letter Queues (DLQ) for failure handling.",
-    github: "https://github.com/Shoeb-K"
+    github: "https://github.com/Shoeb-K/serverless-notification-system"
   },
   {
     title: "Scalable Serverless Backend for Multi-Role App",
     tech: ["AWS Lambda", "DynamoDB", "SQS", "AWS CDK", "Python"],
     description: "Architected a serverless backend supporting multi-role access control (RBAC). Built event-driven workflows and developed JWT-based authentication APIs.",
-    github: "https://github.com/Shoeb-K"
+    github: "https://github.com/Shoeb-K/serverless-multirole-backend"
   },
   {
     title: "Serverless TODO App with CI/CD",
     tech: ["Docker", "Jenkins", "AWS ECS", "Node.js", "React"],
     description: "Developed microservices-based TODO app using Node.js and React on AWS ECS. Automated deployments using CI/CD pipelines and integrated CloudWatch.",
-    github: "https://github.com/Shoeb-K"
+    github: "https://github.com/Shoeb-K/AWS-Jenkins-Pipeline"
   }
 ];
 
